@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <h3 class="col-12 col-md-6 display-2">Вход в личный кабинет</h3>
+    <form action="{{ url_for('index') }}" method="post">
+        <input type="text" name="username" placeholder="Name" required>
+        <input type="email" name="email" aria-describedby="emailHelp" placeholder="E-mail">
+        <input type="submit" class="btn btn-primary" value="Отправить">
+    </form>
+</div>
+{% endblock %}
